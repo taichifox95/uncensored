@@ -9,12 +9,14 @@ This python code transposes paragraphs in .txt files.
 Usage:
 In command line, run:
 ```
+git clone https://github.com/taichifox95/uncensored
 python transpose_words.py --fname [path/to/your/file.txt]  --nrow [n]  --interval [""]  --direction ["right"/"left"]
 ```
 
 E.g.:
 
 ```
+git clone https://github.com/taichifox95/uncensored
 python transpose_words.py --fname test1.txt  --nrow 15  --interval "|"  --direction "left"
 ```
 
