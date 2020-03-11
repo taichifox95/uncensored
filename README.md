@@ -19,15 +19,15 @@ E.g.:
 ```
 git clone https://github.com/taichifox95/uncensored
 cd uncensored
-python transpose_words.py --fname test1.txt  --nrow 15  --interval "|"  --direction "left"
+python transpose_words.py --fname sample\test1.txt  --nrow 15  --interval "|"  --direction "left"
 ```
 
-Example input file test1.txt:
+Example input file sample\test1.txt:
 ```
 2019年12月30日，艾芬曾拿到过一份不明肺炎病人的病毒检测报告，她用红色圈出「SARS冠状病毒」字样，当大学同学问起时，她将这份报告拍下来传给了这位同是医生的同学。当晚，这份报告传遍了武汉的医生圈，转发这份报告的人就包括那8位被警方训诫的医生。
 ```
 
-Output file test1_transposed.txt (in the same directory):
+Output file sample\test1_transposed.txt (in the same directory):
 
 ```
 2|拿|测|冠|时|位|告|报|的
