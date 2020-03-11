@@ -19,7 +19,7 @@ E.g.:
 ```
 git clone https://github.com/taichifox95/uncensored
 cd uncensored
-python transpose_words.py --fname sample\test1.txt  --nrow 15  --interval "|"  --direction "left"
+python transpose_words.py --fname sample/test1.txt  --nrow 15  --interval "|"  --direction "left"
 ```
 
 Example input file sample\test1.txt:
