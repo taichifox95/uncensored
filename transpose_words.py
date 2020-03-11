@@ -146,7 +146,7 @@ def main():
     parser.add_argument('--nrow', type=int, default=None,
                         help='number of rows you want in each paragraph')
     parser.add_argument('--interval', type=str, default="|",
-                        help='interval Char, default = "" ')                      
+                        help='interval Char, default = "｜" ')                      
     parser.add_argument('--direction', type=str, default="left",
                         help='read from left  or right, default left')
     args = parser.parse_args()
