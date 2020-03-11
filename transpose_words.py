@@ -96,7 +96,7 @@ def get_paragraph(line, ncol, interval, nrow = 10, direction = "left"):
     parag_str = ''.join(ls_rows)
     return parag_str
 
-def transpose_text(splited_text, interval, nrow = 10, direction = "left"):
+def transpose_text(splited_text, interval, nrow = 10, direction = "left", truncate = False):
     '''
     for each line, execute get_paragraph
     '''
@@ -119,8 +119,14 @@ def transpose_text(splited_text, interval, nrow = 10, direction = "left"):
                 ncol = line_len//nrow
             else:
                 ncol = line_len//nrow+1
+            # truncate lines:
+            
+
             if ncol >= 15 :
                 print("Number of Rows for Paragraph {} too big, may not display very well.".format(p))
+                
+            
+            
             trans_texts.append(get_paragraph(line,ncol,interval,nrow,direction))
     return trans_texts
 
@@ -149,9 +155,11 @@ def main():
                         help='interval Char, default = "｜" ')                      
     parser.add_argument('--direction', type=str, default="left",
                         help='read from left  or right, default left')
+    parser.add_argument('--truncate', type=bool, default=False,
+                        help='truncate parag that is too long. Default false.')        
     args = parser.parse_args()
     splited_text = split_text(args.fname)
-    transed_text = transpose_text(splited_text, args.interval, args.nrow, args.direction)
+    transed_text = transpose_text(splited_text, args.interval, args.nrow, args.direction, args.truncate)
     write_file(transed_text,args.fname)
 
 if __name__ == "__main__":
