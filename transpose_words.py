@@ -120,8 +120,6 @@ def transpose_text(splited_text, interval, nrow = 10, direction = "left", trunca
             else:
                 ncol = line_len//nrow+1
             # truncate lines:
-            
-
             if ncol >= 15 :
                 print("Number of Rows for Paragraph {} too big, may not display very well.".format(p))
                 
